@@ -1,21 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>WELCOME TO REACT NATIVE</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.text}>BLACKPINK IN YA AREA</Text>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'dodgerblue',
+    padding: "20 10"
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
+  text: {
+    color: "pink",
+    fontWeight: "bold"
+  }
 });
