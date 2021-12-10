@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, SafeAreaView, Image } from "react-native";
+import {
+    StyleSheet,
+    Text,
+    TouchableNativeFeedback,
+    SafeAreaView,
+    Image,
+    View,
+} from "react-native";
 
 export default function App() {
     return (
@@ -17,9 +24,19 @@ export default function App() {
                     width: 200,
                     height: 300,
                 }}
-                blurRadius={10}
                 fadeDuration={1000}
             />
+            <TouchableNativeFeedback
+                onPress={() => console.log("image tapped")}
+            >
+                <View
+                    style={{
+                        width: 200,
+                        height: 70,
+                        backgroundColor: "dodgerblue",
+                    }}
+                ></View>
+            </TouchableNativeFeedback>
         </SafeAreaView>
     );
 }
