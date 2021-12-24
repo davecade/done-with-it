@@ -1,42 +1,14 @@
 import React from "react";
-import {
-    StyleSheet,
-    Text,
-    TouchableNativeFeedback,
-    SafeAreaView,
-    Image,
-    View,
-} from "react-native";
+import { StyleSheet, SafeAreaView, Button } from "react-native";
 
 export default function App() {
     return (
         <SafeAreaView style={styles.container}>
-            <Text
-                style={styles.text}
-                numberOfLines={1}
-                onPress={() => console.log("text clicked")}
-            >
-                BLACKPINK IN YA AREA
-            </Text>
-            <Image
-                source={{
-                    uri: "https://picsum.photos/200/300",
-                    width: 200,
-                    height: 300,
-                }}
-                fadeDuration={1000}
+            <Button
+                title="click me"
+                color="orange"
+                onPress={() => console.log("Button was tapped")}
             />
-            <TouchableNativeFeedback
-                onPress={() => console.log("image tapped")}
-            >
-                <View
-                    style={{
-                        width: 200,
-                        height: 70,
-                        backgroundColor: "dodgerblue",
-                    }}
-                ></View>
-            </TouchableNativeFeedback>
         </SafeAreaView>
     );
 }
