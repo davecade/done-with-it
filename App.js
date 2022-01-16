@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, Button, Alert } from "react-native";
+import {
+    StyleSheet,
+    SafeAreaView,
+    Button,
+    Alert,
+    Platform,
+    StatusBar,
+} from "react-native";
 
 export default function App() {
     return (
@@ -8,22 +15,22 @@ export default function App() {
                 title="click me"
                 color="orange"
                 onPress={() =>
-                    Alert.prompt("My Tite", "My message", text => console.log(text))
+                    Alert.prompt("My Tite", "My message", (text) =>
+                        console.log(text)
+                    )
                 }
             />
         </SafeAreaView>
     );
 }
 
-const containerStyle = { backgroundColor: "orange" }
+const containerStyle = { backgroundColor: "white" };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "black",
-        marginTop: 25,
-        alignItems: "center",
-        justifyContent: "center",
+        paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     },
     text: {
         color: "pink",
