@@ -2,24 +2,30 @@ import React from "react";
 import {
     StyleSheet,
     SafeAreaView,
-    Button,
-    Alert,
+    View,
     Platform,
     StatusBar,
 } from "react-native";
+import {
+    useDimensions,
+    useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
+    console.log("USE DIMENSIONS: ", useDimensions());
+
+    const { landscape } = useDeviceOrientation();
+    console.log("is Landscape?", landscape);
+
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
-            <Button
-                title="click me"
-                color="orange"
-                onPress={() =>
-                    Alert.prompt("My Tite", "My message", (text) =>
-                        console.log(text)
-                    )
-                }
-            />
+            <View
+                style={{
+                    backgroundColor: "dodgerblue",
+                    width: "100%",
+                    height: landscape ? "100%" : "30%",
+                }}
+            ></View>
         </SafeAreaView>
     );
 }
