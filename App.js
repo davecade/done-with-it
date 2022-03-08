@@ -8,27 +8,39 @@ import {
 } from "react-native";
 
 export default function App() {
-
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
             <View
                 style={{
                     backgroundColor: "green",
                     flex: 1,
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    alignItems: "center",
                 }}
             >
-                <View style={{
-                    backgroundColor: "dodgerblue",
-                    flex: 2
-                }} />
-                <View style={{
-                    backgroundColor: "gold",
-                    flex: 1
-                }} />
-                <View style={{
-                    backgroundColor: "tomato",
-                    flex: 1
-                }} />
+                <View
+                    style={{
+                        backgroundColor: "dodgerblue",
+                        height: 100,
+                        width: 100,
+                        alignSelf: "flex-start",
+                    }}
+                />
+                <View
+                    style={{
+                        backgroundColor: "gold",
+                        height: 200,
+                        width: 100,
+                    }}
+                />
+                <View
+                    style={{
+                        backgroundColor: "tomato",
+                        height: 300,
+                        width: 100,
+                    }}
+                />
             </View>
         </SafeAreaView>
     );
