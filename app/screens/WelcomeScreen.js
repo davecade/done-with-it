@@ -8,14 +8,7 @@ const WelcomeScreen = () => {
             resizeMode="cover"
             style={styles.image}
         >
-            <View
-                style={{
-                    flex: 1,
-                    justifyContent: "flex-start",
-                    alignItems: "center",
-                    top: 50,
-                }}
-            >
+            <View style={styles.logoContainer}>
                 <Image
                     source={require("../assets/logo-red.png")}
                     style={{
@@ -51,6 +44,12 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: "flex-end",
+    },
+    logoContainer: {
+        flex: 1,
+        justifyContent: "flex-start",
+        alignItems: "center",
+        top: 50,
     },
 });
 
