@@ -1,4 +1,4 @@
-import { View, ImageBackground } from "react-native";
+import { View, Image } from "react-native";
 import React from "react";
 import styles from "./Card.styles";
 import AppText from "../AppText/AppText";
@@ -6,23 +6,32 @@ import AppText from "../AppText/AppText";
 const Card = ({ title, subtitle, image }) => {
     return (
         <View style={styles.container}>
-            <View style={{
-                flex: 1,
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-            }}>
-                <ImageBackground
-                    source={image}
-                    resizeMode="contain"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                    }}
-                ></ImageBackground>
-            </View>
+            <Image
+                source={image}
+                resizeMode="cover"
+                style={{
+                    width: "100%",
+                    height: 200,
+                    borderRadius: 15,
+                }}
+            ></Image>
             <View style={styles.textContainer}>
-                <AppText color="black">{title}</AppText>
-                <AppText color="green">{subtitle}</AppText>
+                <AppText
+                    color="black"
+                    otherStyles={{
+                        marginBottom: 10,
+                    }}
+                >
+                    {title}
+                </AppText>
+                <AppText
+                    color="green"
+                    otherStyles={{
+                        marginBottom: 10,
+                    }}
+                >
+                    {subtitle}
+                </AppText>
             </View>
         </View>
     );

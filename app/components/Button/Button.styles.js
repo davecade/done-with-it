@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
         width: "100%",
         borderRadius: 50,
         marginBottom: 10,
-    }
-})
+        fontWeight: "600",
+    },
+});
 
-export default styles
+export default styles;

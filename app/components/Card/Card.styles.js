@@ -2,12 +2,9 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "flex-start",
         backgroundColor: "#fff",
-        borderRadius: 10,
+        borderRadius: 15,
+        marginBottom: 20,
     },
     textContainer: {
         width: "100%",

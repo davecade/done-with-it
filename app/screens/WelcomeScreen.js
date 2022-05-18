@@ -21,8 +21,18 @@ const WelcomeScreen = () => {
                 ></Image>
                 <Text style={styles.text}>Sell what you dont need</Text>
             </View>
-            <Button color={colors.primary} text={"LOGIN"} />
-            <Button color={colors.secondary} text={"REGISTER"} />
+            <View style={styles.buttonsContainer}>
+                <Button
+                    color={colors.primary}
+                    text={"LOGIN"}
+                    onPress={() => console.log("LOGIN Pressed")}
+                />
+                <Button
+                    color={colors.secondary}
+                    text={"REGISTER"}
+                    onPress={() => console.log("REGISTER Pressed")}
+                />
+            </View>
         </ImageBackground>
     );
 };
@@ -35,7 +45,6 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: "flex-end",
-        padding: 10,
     },
     logoContainer: {
         flex: 1,
@@ -43,6 +52,10 @@ const styles = StyleSheet.create({
         alignItems: "center",
         top: 50,
     },
+    buttonsContainer: {
+        paddingLeft: 10,
+        paddingRight: 10,
+    }
 });
 
 export default WelcomeScreen;

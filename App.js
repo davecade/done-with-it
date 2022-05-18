@@ -16,14 +16,14 @@ export default function App() {
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
             {/* <WelcomeScreen /> */}
-            <ViewImageScreen />
-            {/* <View style={{ backgroundColor: "#f8f4f4", height: 400, padding: 20 }}>
+            {/* <ViewImageScreen /> */}
+            <View style={{ backgroundColor: "#f8f4f4", height: "100%", padding: 20 }}>
                 <Card
                     title={"Red Jacket for sale!"}
                     subtitle={"$100"}
                     image={require("./app/assets/jacket.jpg")}
                 />
-            </View> */}
+            </View>
         </SafeAreaView>
     );
 }
