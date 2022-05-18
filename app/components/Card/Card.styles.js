@@ -3,13 +3,16 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
         backgroundColor: "#fff",
-        height: "auto",
-        borderRadius: 10
+        borderRadius: 10,
     },
     textContainer: {
-        padding: 20
-    }
+        width: "100%",
+        padding: 20,
+    },
 });
 
 export default styles;
