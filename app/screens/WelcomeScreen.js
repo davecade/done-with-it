@@ -1,5 +1,7 @@
 import React from "react";
 import { StyleSheet, View, Image, ImageBackground, Text } from "react-native";
+import Button from "../components/Button/Button";
+import colors from "../config/colors";
 
 const WelcomeScreen = () => {
     return (
@@ -7,6 +9,7 @@ const WelcomeScreen = () => {
             source={require("../assets/background.jpg")}
             resizeMode="cover"
             style={styles.image}
+            blurRadius={5}
         >
             <View style={styles.logoContainer}>
                 <Image
@@ -18,20 +21,8 @@ const WelcomeScreen = () => {
                 ></Image>
                 <Text style={styles.text}>Sell what you dont need</Text>
             </View>
-            <View
-                style={{
-                    backgroundColor: "#fc5c65",
-                    flexDirection: "row",
-                    height: 50,
-                }}
-            ></View>
-            <View
-                style={{
-                    backgroundColor: "#4ECDC4",
-                    flexDirection: "row",
-                    height: 50,
-                }}
-            ></View>
+            <Button color={colors.primary} text={"LOGIN"} />
+            <Button color={colors.secondary} text={"REGISTER"} />
         </ImageBackground>
     );
 };
@@ -44,6 +35,7 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: "flex-end",
+        padding: 10,
     },
     logoContainer: {
         flex: 1,
