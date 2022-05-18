@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         borderRadius: 15,
         marginBottom: 20,
+        overflow: "hidden",
     },
     textContainer: {
         width: "100%",
