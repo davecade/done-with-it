@@ -6,16 +6,18 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 const ViewImageScreen = () => {
     return (
         <View style={styles.container}>
-            <MaterialCommunityIcons
-                name="close"
-                size={30}
-                style={styles.closeIcon}
-            ></MaterialCommunityIcons>
-            <MaterialCommunityIcons
-                name="trash-can-outline"
-                size={30}
-                style={styles.deleteIcon}
-            ></MaterialCommunityIcons>
+            <View style={styles.iconsContainer}>
+                <MaterialCommunityIcons
+                    name="close"
+                    size={35}
+                    style={styles.closeIcon}
+                ></MaterialCommunityIcons>
+                <MaterialCommunityIcons
+                    name="trash-can-outline"
+                    size={35}
+                    style={styles.deleteIcon}
+                ></MaterialCommunityIcons>
+            </View>
             <Image
                 source={require("../assets/chair.jpg")}
                 resizeMode="contain"
@@ -27,13 +29,16 @@ const ViewImageScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",
         backgroundColor: colors.black,
     },
+    iconsContainer: {
+        marginBottom: 30
+    },
     image: {
-        height: "90%",
+        height: "100%",
         width: "100%",
     },
     closeIcon: {
@@ -41,7 +46,7 @@ const styles = StyleSheet.create({
         height: 30,
         width: 30,
         //backgroundColor: colors.primary,
-        color: "#fff",
+        color: colors.white,
         top: 10,
         left: 20,
     },
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         height: 30,
         width: 30,
-        color: "#fff",
+        color: colors.white,
         //backgroundColor: colors.secondary,
         top: 10,
         right: 20,

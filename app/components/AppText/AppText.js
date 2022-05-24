@@ -5,10 +5,11 @@ import styles from "./styles";
 const AppText = ({ children, color, otherStyles }) => {
     return (
         <Text
-            style={[{
+            style={{
                 ...styles.text,
                 color: color,
-            }, otherStyles]}
+                ...otherStyles,
+            }}
         >
             {children}
         </Text>

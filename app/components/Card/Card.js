@@ -2,6 +2,7 @@ import { View, Image } from "react-native";
 import React from "react";
 import styles from "./Card.styles";
 import AppText from "../AppText/AppText";
+import colors from "../../config/colors";
 
 const Card = ({ title, subtitle, image }) => {
     return (
