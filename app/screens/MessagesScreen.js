@@ -1,7 +1,10 @@
-import { FlatList } from "react-native";
+import { FlatList, View } from "react-native";
 import React from "react";
 import ListItem from "../components/ListItem/ListItem";
 import Screen from "../components/Screen/Screen";
+import ListItemSeparator from "../components/ListItemSeparator/ListItemSeparator";
+import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
+import ListItemDeleteAction from '../components/ListItemDeleteAction/ListItemDeleteAction'
 
 const messages = [
     {
@@ -29,8 +32,11 @@ const MessagesScreen = () => {
                         title={item.title}
                         subtitle={item.description}
                         image={item.image}
+                        onPress={() => console.log("Hello")}
+                        renderRightActions={ListItemDeleteAction}
                     />
                 )}
+                ItemSeparatorComponent={ListItemSeparator}
             />
         </Screen>
     );
