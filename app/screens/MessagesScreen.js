@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import ListItem from "../components/ListItem/ListItem";
 import Screen from "../components/Screen/Screen";
 import ListItemSeparator from "../components/ListItemSeparator/ListItemSeparator";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import ListItemDeleteAction from "../components/ListItemDeleteAction/ListItemDeleteAction";
 
 let initialMessages = [

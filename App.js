@@ -12,7 +12,8 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import Card from "./app/components/Card/Card";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import MessagesScreen from './app/screens/MessagesScreen'
+import MessagesScreen from "./app/screens/MessagesScreen";
+import MyAccount from "./app/screens/MyAccount";
 
 export default function App() {
     return (
@@ -27,7 +28,8 @@ export default function App() {
                 />
             </View> */}
             {/* <ListingDetailsScreen /> */}
-            <MessagesScreen />
+            {/* <MessagesScreen /> */}
+            <MyAccount />
         </SafeAreaView>
     );
 }
