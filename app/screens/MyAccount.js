@@ -1,10 +1,25 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View, FlatList } from "react-native";
 import React from "react";
 import Screen from "../components/Screen/Screen";
 import ListItem from "../components/ListItem/ListItem";
 import ListItemSeparator from "../components/ListItemSeparator/ListItemSeparator";
 import Icon from "../components/Icon/icon";
 import colors from "../config/colors";
+
+let data = [
+    {
+        id: 1,
+        title: "My Listings",
+        backgroundColor: colors.primary,
+        iconType: "format-list-bulleted",
+    },
+    {
+        id: 2,
+        title: "My Messages",
+        backgroundColor: colors.secondary,
+        iconType: "email",
+    },
+];
 
 const MyAccount = () => {
     return (
@@ -17,22 +32,27 @@ const MyAccount = () => {
                     onPress={() => {}}
                 />
                 <ListItemSeparator height={50} />
-                <Icon
-                    title={"My Listings"}
-                    backgroundColor={colors.primary}
-                    iconType={"format-list-bulleted"}
-                />
-                <ListItemSeparator height={5} />
-                <Icon
-                    title={"My Messages"}
-                    backgroundColor={colors.secondary}
-                    iconType={"email"}
-                />
+                <View>
+                    <FlatList
+                        data={data}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <Icon
+                                    key={index}
+                                    title={item.title}
+                                    backgroundColor={item.backgroundColor}
+                                    iconType={item.iconType}
+                                />
+                            );
+                        }}
+                        ItemSeparatorComponent={ListItemSeparator}
+                    />
+                </View>
                 <ListItemSeparator height={20} />
                 <Icon
-                    title={"My Messages"}
+                    title={"Log Out"}
                     backgroundColor={colors.yellow}
-                    iconType={"email"}
+                    iconType={"logout"}
                 />
             </View>
         </Screen>

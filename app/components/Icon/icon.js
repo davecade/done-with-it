@@ -30,7 +30,6 @@ const styles = StyleSheet.create({
     container: {
         width: "100%",
         padding: 15,
-        display: "flex",
         flexDirection: "row",
         backgroundColor: colors.white,
     },
