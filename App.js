@@ -15,8 +15,8 @@ import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import MyAccount from "./app/screens/MyAccount";
 import ListingsScreen from "./app/screens/ListingsScreen";
-
-
+import TextInputDemo from "./app/components/TextInputDemo/TextInputDemo";
+import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 
 export default function App() {
     return (
@@ -32,8 +32,10 @@ export default function App() {
             </View> */}
             {/* <ListingDetailsScreen /> */}
             {/* <MessagesScreen /> */}
-            <MyAccount />
+            {/* <MyAccount /> */}
             {/* <ListingsScreen /> */}
+            {/* <TextInputDemo /> */}
+            <AppTextInput placeholder={"hello"} icon={"email"} />
         </SafeAreaView>
     );
 }

@@ -1,18 +1,8 @@
 import { StyleSheet, Platform } from "react-native";
+import defaultStyles from "../../config/styles";
 
 const styles = StyleSheet.create({
-    text: {
-        ...Platform.select({
-            ios: {
-                fontSize: 20,
-                fontFamily: "Avenir",
-            },
-            android: {
-                fontSize: 18,
-                fontFamily: "Roboto",
-            },
-        }),
-    },
+    text: defaultStyles.text,
 });
 
 export default styles;
