@@ -17,6 +17,7 @@ import MyAccount from "./app/screens/MyAccount";
 import ListingsScreen from "./app/screens/ListingsScreen";
 import TextInputDemo from "./app/components/TextInputDemo/TextInputDemo";
 import AppTextInput from "./app/components/AppTextInput/AppTextInput";
+import AppPicker from "./app/components/AppPicker/AppPicker";
 
 export default function App() {
     return (
@@ -35,7 +36,9 @@ export default function App() {
             {/* <MyAccount /> */}
             {/* <ListingsScreen /> */}
             {/* <TextInputDemo /> */}
-            <AppTextInput placeholder={"hello"} icon={"email"} />
+            {/* <AppTextInput placeholder={"hello"} icon={"email"} /> */}
+            <AppPicker icon={"apps"} placeholder={"Category"} />
+            <AppTextInput icon={"email"} placeholder={"Email"} />
         </SafeAreaView>
     );
 }
