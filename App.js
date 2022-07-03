@@ -19,6 +19,12 @@ import TextInputDemo from "./app/components/TextInputDemo/TextInputDemo";
 import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 import AppPicker from "./app/components/AppPicker/AppPicker";
 
+const categories = [
+    { label: "Funiture", value: 1 },
+    { label: "Clothing", value: 1 },
+    { label: "Funiture", value: 1 },
+];
+
 export default function App() {
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
@@ -37,7 +43,11 @@ export default function App() {
             {/* <ListingsScreen /> */}
             {/* <TextInputDemo /> */}
             {/* <AppTextInput placeholder={"hello"} icon={"email"} /> */}
-            <AppPicker icon={"apps"} placeholder={"Category"} />
+            <AppPicker
+                icon={"apps"}
+                placeholder={"Category"}
+                items={categories}
+            />
             <AppTextInput icon={"email"} placeholder={"Email"} />
         </SafeAreaView>
     );
