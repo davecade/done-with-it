@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     StyleSheet,
     SafeAreaView,
@@ -18,14 +18,17 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import TextInputDemo from "./app/components/TextInputDemo/TextInputDemo";
 import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 import AppPicker from "./app/components/AppPicker/AppPicker";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const categories = [
     { label: "Funiture", value: 1 },
-    { label: "Clothing", value: 1 },
-    { label: "Funiture", value: 1 },
+    { label: "Clothing", value: 2 },
+    { label: "Mobile Phones", value: 3 },
 ];
 
 export default function App() {
+    const [category, setCategory] = useState(categories[0]);
+
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
             {/* <WelcomeScreen /> */}
@@ -43,12 +46,15 @@ export default function App() {
             {/* <ListingsScreen /> */}
             {/* <TextInputDemo /> */}
             {/* <AppTextInput placeholder={"hello"} icon={"email"} /> */}
-            <AppPicker
+            {/* <AppPicker
+                selectedItem={category}
+                onSelectedItem={(item) => setCategory(item)}
                 icon={"apps"}
                 placeholder={"Category"}
                 items={categories}
-            />
-            <AppTextInput icon={"email"} placeholder={"Email"} />
+            /> */}
+            {/* <AppTextInput icon={"email"} placeholder={"Email"} /> */}
+            <LoginScreen />
         </SafeAreaView>
     );
 }
