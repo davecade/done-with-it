@@ -19,6 +19,8 @@ import TextInputDemo from "./app/components/TextInputDemo/TextInputDemo";
 import AppTextInput from "./app/components/AppTextInput/AppTextInput";
 import AppPicker from "./app/components/AppPicker/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
+import RegisterScreen from "./app/screens/RegisterScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 const categories = [
     { label: "Funiture", value: 1 },
@@ -54,7 +56,9 @@ export default function App() {
                 items={categories}
             /> */}
             {/* <AppTextInput icon={"email"} placeholder={"Email"} /> */}
-            <LoginScreen />
+            {/* <LoginScreen /> */}
+            {/* <RegisterScreen /> */}
+            <ListingEditScreen />
         </SafeAreaView>
     );
 }
