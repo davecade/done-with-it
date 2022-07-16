@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 import styles from "./styles";
 
-const AppText = ({ children, color, style }) => {
+const AppText = ({ children, color, style, ...otherProps }) => {
     return (
         <Text
             style={{
@@ -10,6 +10,7 @@ const AppText = ({ children, color, style }) => {
                 color: color,
                 ...style,
             }}
+            {...otherProps}
         >
             {children}
         </Text>

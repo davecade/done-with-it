@@ -43,7 +43,7 @@ export default function App() {
                 />
             </View> */}
             {/* <ListingDetailsScreen /> */}
-            {/* <MessagesScreen /> */}
+            <MessagesScreen />
             {/* <MyAccount /> */}
             {/* <ListingsScreen /> */}
             {/* <TextInputDemo /> */}
@@ -58,7 +58,7 @@ export default function App() {
             {/* <AppTextInput icon={"email"} placeholder={"Email"} /> */}
             {/* <LoginScreen /> */}
             {/* <RegisterScreen /> */}
-            <ListingEditScreen />
+            {/* <ListingEditScreen /> */}
         </SafeAreaView>
     );
 }
