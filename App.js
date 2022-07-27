@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
     StyleSheet,
     SafeAreaView,
@@ -21,6 +21,7 @@ import AppPicker from "./app/components/AppPicker/AppPicker";
 import LoginScreen from "./app/screens/LoginScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
+import * as ImagePicker from "expo-image-picker";
 
 const categories = [
     { label: "Funiture", value: 1 },
@@ -30,6 +31,17 @@ const categories = [
 
 export default function App() {
     const [category, setCategory] = useState(categories[0]);
+
+    const requestPermission = async () => {
+        const { granted } = await ImagePicker.requestCameraPermissionsAsync();
+        if (!granted) {
+            alert("You need to enable permissions to access the library");
+        }
+    };
+
+    useEffect(() => {
+        requestPermission();
+    }, []);
 
     return (
         <SafeAreaView style={[styles.container, containerStyle]}>
@@ -43,7 +55,7 @@ export default function App() {
                 />
             </View> */}
             {/* <ListingDetailsScreen /> */}
-            <MessagesScreen />
+            {/* <MessagesScreen /> */}
             {/* <MyAccount /> */}
             {/* <ListingsScreen /> */}
             {/* <TextInputDemo /> */}
